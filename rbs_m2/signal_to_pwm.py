@@ -201,19 +201,11 @@ def convert_bin(verbose, bin_fp, output_fp):
             break
 
 @click.command()
-@click.option('--verbose', default=False)
+@click.option('--verbose', is_flag=True)
 @click.argument('challenge')
 @click.argument('signal')
 def run(verbose, challenge, signal):
-    '''
-    challenge:
-        examples
-        live
-    signal:
-        signal_0
-        signal_1
-        signal_2
-    '''
+    'CHALLENGE: [examples, live], SIGNAL: [signal_0, signal_1, signal_2]'
     start = timeit.default_timer()
     if challenge not in ['examples', 'live']:
         print('invalid challenge')

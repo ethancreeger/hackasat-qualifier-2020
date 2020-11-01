@@ -56,13 +56,8 @@ CHALLENGES = {
 @click.argument('challenge')
 def run(challenge):
     '''
-    challenge:
-        challenge0
-        challenge1
-        challenge2
-        challenge3
-        challenge4
-        live
+    CHALLENGE:\n
+        [challenge0, challenge1, challenge2, challenge3, challenge4, live]
     '''
     if challenge not in CHALLENGES:
         print('invalid challenge')

@@ -34,19 +34,11 @@ CHALLENGES = {
 }
 
 @click.command()
-@click.option('--verbose', default=False)
+@click.option('--verbose', is_flag=True)
 @click.argument('challenge')
 @click.argument('signal')
 def run(verbose, challenge, signal):
-    '''
-    challenge:
-        examples
-        live
-    signal:
-        signal_0
-        signal_1
-        signal_2
-    '''
+    'CHALLENGE: [examples, live], SIGNAL: [signal_0, signal_1, signal_2]'
     if challenge not in CHALLENGES:
         print('invalid challenge')
         return
