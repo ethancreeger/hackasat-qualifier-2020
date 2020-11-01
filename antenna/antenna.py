@@ -56,7 +56,7 @@ CHALLENGES = {
 @click.argument('challenge')
 def run(challenge):
     '''
-    Options:
+    challenge:
         challenge0
         challenge1
         challenge2
